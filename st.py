@@ -19,7 +19,7 @@ st.markdown(
 #st.title("Displaying Data in CSV & JSON Formats (via FastAPI)")
 
 # Call FastAPI endpoint
-response = requests.get("http://127.0.0.1/csv-to-json/")
+response = requests.get("http://127.0.0.1:8000/csv-to-json/")
 if response.status_code == 200:
     data = response.json()
     cc=["JSON", "DataFrame"]
@@ -30,4 +30,5 @@ if response.status_code == 200:
         st.dataframe(data)  # table view
 else:
     st.error("Failed to fetch data from FastAPI")
+
 
