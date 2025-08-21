@@ -1,0 +1,5 @@
+FastAPI
+streamlit
+pandas
+requests
+json
